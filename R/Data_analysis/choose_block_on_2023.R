@@ -4,8 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(purrr)
 
-# Load and prepare data using data.table 41049 station
-# Change station and year for differen test
+# Load and prepare data using data.table 41001 station
 data <- fread("Desktop/#41049/2023_41049.txt")
 setnames(data, "#YY", "YY")
 data <- data[WVHT != "99.00", ]
