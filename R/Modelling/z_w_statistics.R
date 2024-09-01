@@ -17,9 +17,10 @@ omega <- 2 * pi
 
 # Extract the coefficients related to mu, sigma, and xi
 mu0 <- coefficients["mu0"]
-mu1 <- coefficients["mu1"]
-mu2 <- coefficients["mu2"]
-a <- coefficients["mu3"]
+a <- coefficients["mu1"]
+mu1 <- coefficients["mu2"]
+mu2 <- coefficients["mu3"]
+
 
 phi0 <- coefficients["phi0"]
 b <- coefficients["phi1"]
