@@ -3,7 +3,6 @@ library(dplyr)
 library(zoo)
 library(ggplot2)
 
-# This is for Station 41049, change the file for different stations
 # Load data
 my.data <- read.csv("data_41049.csv")
 
@@ -32,6 +31,13 @@ result <- analyze.wavelet(
   date.tz = NULL,
   verbose = TRUE
 )
+
+# Reconstruct the time series
+reconstruct_data <- reconstruct(result)
+my.data$reconstruct = reconstruct_data$series$max_WHT.r
+
+# Optionally, save the updated my.data with the reconstruction to a CSV file
+write.csv(my.data, "data_41049.csv", row.names = FALSE)
 
 # Inspect the result
 wt.image(result, periodlab = "Periods (years)",
@@ -88,8 +94,6 @@ ggplot() +
 
 
 # Reconstructoin of the time series
-reconstruct_data <- reconstruct(result)
-write.csv(reconstruct_data$series, file= "reconstruct_data.csv")
 reconstruction <- data.frame(
   Time = my.data$period_start,
   Reconstruction = reconstruct_data$series
