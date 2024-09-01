@@ -28,7 +28,7 @@ cd yourprojectname
 
 ```plaintext
 /non-stationary-extreme-analysis  # Root directory of the project
-├── data                          # Contains all datasets used in the project
+├── Data                          # Contains all datasets used in the project
 ├── docs                          # Additional documentation and guides for users
 ├── R                             # R scripts for analysis and functions
 ├── tests                         # Automated tests to ensure reliability
