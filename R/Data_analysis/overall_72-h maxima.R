@@ -48,7 +48,7 @@ for (station_id in station_ids) {
     select(period_start, max_WHT)
   
   # Save the combined results to a CSV file
-  output_filename <- file.path(base_directory_path, paste("data_", station_id, ".csv", sep = ""))
+  output_filename <- file.path(paste("data_", station_id, ".csv", sep = ""))
   write.csv(data_transformed, file = output_filename, row.names = FALSE)
   
   print(paste("Data processed and saved for station", station_id))
