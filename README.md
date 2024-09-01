@@ -23,14 +23,14 @@ git clone https://github.com/yourusername/yourprojectname.git
 cd yourprojectname
 # Additional setup instructions
 
+/non-stationary-extreme-analysis  # Root directory of the project
+├── data                          # Contains all datasets used in the project
+├── docs                          # Additional documentation and guides for users
+├── R                             # R scripts for analysis and functions
+├── tests                         # Automated tests to ensure reliability
+├── output                        # Generated outputs from scripts, like tables and figures
+└── examples                      # Sample scripts demonstrating project use
 
-## Directory Structure
-```bash
-/your-project-name
-├── data                # datasets and data processing scripts
-├── docs                # project documentation and guides
-├── R                   # R scripts and functions
-├── tests               # test cases and testing scripts
-├── output              # analysis outputs and results
-└── examples            # examples and tutorials
+
+
 
