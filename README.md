@@ -8,9 +8,7 @@
 3. [Project Structure](#project-structure)
 4. [Usage](#usage)
 5. [Features](#features)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
+6. [Contact](#contact)
 
 ## Introduction
 
