@@ -79,21 +79,21 @@ Non-stationary-extreme-analysis/
 Here is an explanation of the main folders and files in this project:
 
 - **Data/**: Contains raw and processed data files.
-  - **#41043/**, **#41044/**, **#41047/**, **#41049/**: These folders store raw data specific to different stations.
+  - **#41043/**, **#41044/**, **#41047/**, **#41049/**: Folders that store raw data specific to different stations.
   - **Processes_data/**: Contains processed data files ready for analysis.
     - **data_41043.csv**, **data_41044.csv**, **data_41047.csv**, **data_41049.csv**: Processed versions of the 72-hour maxima datasets for each station, including scaled time, reconstructed data, and threshold values for each 72-hour maxima observation.
 
 - **R/**: Contains R scripts related to data analysis and modeling.
   - **Data_analysis/**: A sub-directory within `R/` that includes scripts for various stages of data analysis.
     - **EDA.R**: Script for performing exploratory data analysis on the dataset.
-    - **choose_block_on_2023.R**: Script focused on selecting data blocks by examining the serial correlation of internal structures for station 41049 in the year 2023. 
+    - **choose_block_on_2023.R**: Script focused on selecting data blocks by examining the serial correlation of internal structures for station 41049 in the year 2023. This script is also applicable to other stations and years.
     - **check_of_block.R**: Script used to validate 72-hour data blocks by examining the first-order dependence of extreme value occurrences.
     - **overall_72-h maxima.R**: Script for calculating or analyzing the 72-hour maxima across datasets.
   - **Wavelet_analysis/**: A sub-directory within `R/` containing scripts related to wavelet analysis. These scripts are used to generate the wavelet power spectrum, compute the global power spectrum, detect significant periods, and perform data reconstruction based on the wavelet analysis.
   - **Modelling/**: A sub-directory within `R/` that includes scripts related to the modeling phase.
     - **threshold_finding.R**: Script used to determine time-varying thresholds.
-    - **Model_fitting_and_return.R**: Script for model fitting and return level estimation based on the models without reconstruction term. 
-    - **Model_fitting_reconstruct/**: A directory dedicated to scripts for fitting models and estimating return levels based on the models with reconstruction term. 
+    - **Model_fitting_and_return.R**: Script for model fitting and return level estimation based on models without reconstruction terms.
+    - **Model_fitting_reconstruct/**: A directory dedicated to scripts for fitting models and estimating return levels based on models with reconstruction terms.
     - **Analysis_based_on_best_model/**: Contains scripts for identifying and using the best-fitting models.
       - **z_w_statistics.R**: Script for computing or analyzing Z-statistics and W-statistics relevant to the best model fits.
       - **return_best_fitted.R**: Script to make effective and aggregated return level estimation based on the best model.
@@ -111,22 +111,18 @@ To help you navigate and work with this project, here is a step-by-step guide:
 2. **Data Analysis**:
    - Navigate to the `R/Data_analysis/` directory.
    - Use `EDA.R` to explore and understand the data for all four stations.
-   - Use `choose_block_on_2023.R` to compare between 24-h, 48-h and 72-h blocks based on station 41049 in year 2023. This is also applicable to other stations and years.
-   - Validate blocks of data with `check_of_block.R` based on station 41049. This is also applicable to other stations.
+   - Use `choose_block_on_2023.R` to compare between 24-h, 48-h, and 72-h blocks based on station 41049 in the year 2023. This script is also applicable to other stations and years.
+   - Validate blocks of data with `check_of_block.R` based on station 41049. This script is also applicable to other stations.
    - Calculate 72-hour maxima using `overall_72-h maxima.R` for all stations and save the processed data.
 
-3. **Wavelet Analysis**
-   - Explore the `Wavelet_analysis/` directory for wavelet-based analysis using processed data from four different stations. This process generates the wavelet power spectrum and global power spectrum plots. Additionally, the analysis produces filtered reconstructed data, which is saved as a new column labeled 'reconstruct' in the dataset. The reconstructed data is then plotted for further analysis.
+3. **Wavelet Analysis**:
+   - Explore the `Wavelet_analysis/` directory for wavelet-based analysis using processed data from four different stations. This process generates the wavelet power spectrum and global power spectrum plots. Additionally, the analysis produces filtered reconstructed data, which is saved as a new column labeled `reconstruct` in the dataset. The reconstructed data is then plotted for further analysis.
 
 4. **Modelling**:
-   
-   - Start with `R/Data_analysis/Modelling/Analysis_based_on_best_model/` to identify and use the best models.
-   - Use `Model_fitting_and_return.R` for model fitting and result generation.
-   - Apply `threshold_finding.R` for determining necessary thresholds.
-
-
-5. **Model Fitting and Reconstruction**:
-   - Use the scripts in `R/Data_analysis/Modelling/Model_fitting_reconstruct/` to focus on model fitting and reconstruction tasks.
+   - Apply `threshold_finding.R` to determine thresholds by using data for different stations and save the results as a new column labeled `threshold` in the dataset.
+   - Use `Model_fitting_and_return.R` for model fitting and return level estimation for models without reconstruction terms. The number of sinusoidal harmonics in a year may need to be adjusted. The dataset can be changed to compute results for different stations.
+   - Use the `R/Data_analysis/Modelling/Model_fitting_reconstruct/` directory, which contains scripts for fitting models with reconstruction terms and applying different coefficients to these terms. The dataset can be changed to compute results for different stations.
+   - Use the `R/Data_analysis/Modelling/Analysis_based_on_best_model/` directory to evaluate the quality of the best-fitted model and make return level estimations. Different best-fitted models can be applied.
 
 
 ## Contact
