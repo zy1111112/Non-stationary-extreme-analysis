@@ -1,6 +1,5 @@
-# Project Title
+# Non-stationary Extreme Value Analysis Using Wavelet and Point Process Approaches
 
-A brief description of what your project does and who it's for.
 
 ## Table of Contents
 
