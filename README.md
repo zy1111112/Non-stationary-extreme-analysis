@@ -90,8 +90,8 @@ Here is an explanation of the main folders and files in this project:
 - **R/**: Contains R scripts related to data analysis and modeling.
   - **Data_analysis/**: A sub-directory within `R/` that includes scripts for various stages of data analysis.
     - **EDA.R**: Script for performing exploratory data analysis on the dataset.
-    - **check_of_block.R**: Script used to validate or inspect blocks of data.
-    - **choose_block_on_2023.R**: Script focused on selecting data blocks relevant to the year 2023.
+    - **choose_block_on_2023.R**: Script focused on selecting data blocks by examining the serial correlation of internal structures for station 41049 in the year 2023. This script is also applicable to other stations and years.
+    - **check_of_block.R**: Script used to validate 72-hour data blocks by examining the first-order dependence of extreme value occurrences.
     - **overall_72-h maxima.R**: Script for calculating or analyzing the 72-hour maxima across datasets.
     - **Modelling/**: A sub-directory within `Data_analysis/` that includes scripts related to the modeling phase.
       - **Analysis_based_on_best_model/**: Contains scripts for identifying and using the best-fitting models.
