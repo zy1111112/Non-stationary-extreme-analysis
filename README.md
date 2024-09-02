@@ -5,11 +5,12 @@
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Features](#features)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Contact](#contact)
+3. [Project Structure](#project-structure)
+4. [Usage](#usage)
+5. [Features](#features)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
 ## Introduction
 
@@ -44,6 +45,32 @@ This project models non-stationary extreme values exhibiting seasonality, using 
     ```R
     devtools::install_github("yourusername/your-repo-name/your-package")
     ```
+
+## Project Structure
+
+Below is a brief explanation of the main folders and files in this project:
+
+```plaintext
+your-repo-name/
+├── data/
+│   ├── raw/
+│   │   └── dataset.csv
+│   ├── processed/
+│   │   └── cleaned_data.csv
+├── R/
+│   ├── functions.R
+│   └── analysis_script.R
+├── docs/
+│   ├── report.md
+│   └── figures/
+│       └── plot1.png
+├── tests/
+│   └── testthat/
+│       └── test_functions.R
+├── .gitignore
+├── README.md
+└── your-repo-name.Rproj
+
 
 ## Usage
 
