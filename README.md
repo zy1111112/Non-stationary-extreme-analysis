@@ -83,9 +83,9 @@ Non-stationary-extreme-analysis/
 Here is an explanation of the main folders and files in this project:
 
 - **Data/**: Contains raw and processed data files.
-  - **#41043/**, **#41044/**, **#41047/**, **#41049/**: These folders store raw data specific to different datasets or experiments.
+  - **#41043/**, **#41044/**, **#41047/**, **#41049/**: These folders store raw data specific to different stations.
   - **Processes_data/**: Contains processed data files ready for analysis.
-    - **data_41043.csv**, **data_41044.csv**, **data_41047.csv**, **data_41049.csv**: Processed versions of the corresponding raw data files.
+    - **data_41043.csv**, **data_41044.csv**, **data_41047.csv**, **data_41049.csv**: Processed versions of the 72-hour maxima datasets for each station, including scaled time, reconstructed data, and threshold values for each 72-hour maxima observation.
 
 - **R/**: Contains R scripts related to data analysis and modeling.
   - **Data_analysis/**: A sub-directory within `R/` that includes scripts for various stages of data analysis.
