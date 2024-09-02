@@ -110,18 +110,22 @@ To help you navigate and work with this project, here is a step-by-step guide:
 
 2. **Data Analysis**:
    - Navigate to the `R/Data_analysis/` directory.
-   - Use `EDA.R` to explore and understand the data.
-   - Validate blocks of data with `check_of_block.R`.
-   - If analyzing data from 2023, use `choose_block_on_2023.R`.
-   - Calculate 72-hour maxima using `overall_72-h maxima.R`.
+   - Use `EDA.R` to explore and understand the data for all four stations.
+   - Use `choose_block_on_2023.R` to compare between 24-h, 48-h and 72-h blocks based on station 41049 in year 2023. This is also applicable to other stations and years.
+   - Validate blocks of data with `check_of_block.R` based on station 41049. This is also applicable to other stations.
+   - Calculate 72-hour maxima using `overall_72-h maxima.R` for all stations and save the processed data.
 
-3. **Modelling**:
+3. **Wavelet Analysis**
+   - Explore the `Wavelet_analysis/` directory for wavelet-based analysis using processed data from four different stations. This process generates the wavelet power spectrum and global power spectrum plots. Additionally, the analysis produces filtered reconstructed data, which is saved as a new column labeled 'reconstruct' in the dataset. The reconstructed data is then plotted for further analysis.
+
+4. **Modelling**:
+   
    - Start with `R/Data_analysis/Modelling/Analysis_based_on_best_model/` to identify and use the best models.
    - Use `Model_fitting_and_return.R` for model fitting and result generation.
    - Apply `threshold_finding.R` for determining necessary thresholds.
-   - Explore `Wavelet_analysis/` for wavelet-based analysis if needed.
 
-4. **Model Fitting and Reconstruction**:
+
+5. **Model Fitting and Reconstruction**:
    - Use the scripts in `R/Data_analysis/Modelling/Model_fitting_reconstruct/` to focus on model fitting and reconstruction tasks.
 
 
@@ -129,7 +133,7 @@ To help you navigate and work with this project, here is a step-by-step guide:
 
 For any questions, please feel free to reach out:
 
-- **Your Name**
+- **Zihan Yan**
 - Email: [zy1723@ic.ac.uk](mailto:zy1723@ic.ac.uk)
 
 
