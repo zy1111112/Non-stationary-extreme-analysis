@@ -6,9 +6,7 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Project Structure](#project-structure)
-4. [Usage](#usage)
-5. [Features](#features)
-6. [Contact](#contact)
+4. [Contact](#contact)
 
 ## Introduction
 
@@ -127,25 +125,12 @@ To help you navigate and work with this project, here is a step-by-step guide:
    - Use the scripts in `R/Data_analysis/Modelling/Model_fitting_reconstruct/` to focus on model fitting and reconstruction tasks.
 
 
+## Contact
 
+For any questions, please feel free to reach out:
 
-
-## Usage
-
-Provide examples of how to use the project, including code snippets and explanations.
-
-### Example
-
-```R
-# Load the package
-library(yourpackagename)
-
-# Example usage
-result <- your_function(input_data)
-print(result)
-```
-
-### Contact
+- **Your Name**
+- Email: [zy1723@ic.ac.uk](mailto:zy1723@ic.ac.uk)
 
 
 
