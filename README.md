@@ -16,9 +16,7 @@ This project models non-stationary extreme values exhibiting seasonality, using 
 
 ### Prerequisites
 
-- R version x.x.x or higher
-- RStudio (optional)
-- Required R packages: `package1`, `package2`, `package3`
+- Required R packages: `data.table`, `dplyr`, `stringr`, `ggplot2`, `purrr`, `WaveletComp`, `zoo`, `GenSA`, `stats`, `extRemes`
 
 ### Installation Steps
 
@@ -33,13 +31,7 @@ This project models non-stationary extreme values exhibiting seasonality, using 
 3. Install the required R packages:
 
     ```R
-    install.packages(c("package1", "package2", "package3"))
-    ```
-
-4. Install custom package (if applicable):
-
-    ```R
-    devtools::install_github("yourusername/your-repo-name/your-package")
+    install.packages(c("data.table", "dplyr", "stringr", "ggplot2", "purrr", "WaveletComp", "zoo", "GenSA", "stats", "extRemes"))
     ```
 
 ## Project Structure
