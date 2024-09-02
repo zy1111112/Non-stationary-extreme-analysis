@@ -51,25 +51,83 @@ This project models non-stationary extreme values exhibiting seasonality, using 
 Below is a brief explanation of the main folders and files in this project:
 
 ```plaintext
-your-repo-name/
-├── data/
-│   ├── raw/
-│   │   └── dataset.csv
-│   ├── processed/
-│   │   └── cleaned_data.csv
+Non-stationary-extreme-analysis/
+├── Data/
+│   ├── #41043/
+│   ├── #41044/
+│   ├── #41047/
+│   ├── #41049/
+│   ├── Processes_data/
+│   │   ├── data_41043.csv
+│   │   ├── data_41044.csv
+│   │   ├── data_41047.csv
+│   │   └── data_41049.csv
 ├── R/
-│   ├── functions.R
-│   └── analysis_script.R
-├── docs/
-│   ├── report.md
-│   └── figures/
-│       └── plot1.png
-├── tests/
-│   └── testthat/
-│       └── test_functions.R
-├── .gitignore
-├── README.md
-└── your-repo-name.Rproj
+│   └── Data_analysis/
+│       ├── EDA.R
+│       ├── check_of_block.R
+│       ├── choose_block_on_2023.R
+│       ├── overall_72-h maxima.R
+│       ├── Modelling/
+│       │   ├── Analysis_based_on_best_model/
+│       │   │   ├── return_best_fitted.R
+│       │   │   └── z_w_statistics.R
+│       │   ├── Model_fitting_reconstruct/
+│       │   ├── Model_fitting_and_return.R
+│       │   └── threshold_finding.R
+│       └── Wavelet_analysis/
+└── README.md
+```
+Folder and File Descriptions
+Here is an explanation of the main folders and files in this project:
+
+Data/: Contains raw and processed data files.
+
+#41043/, #41044/, #41047/, #41049/: These folders store raw data specific to different datasets or experiments.
+Processes_data/: Contains processed data files ready for analysis.
+data_41043.csv, data_41044.csv, data_41047.csv, data_41049.csv: Processed versions of the corresponding raw data files.
+R/: Contains R scripts related to data analysis and modeling.
+
+Data_analysis/: A sub-directory within R/ that includes scripts for various stages of data analysis.
+EDA.R: Script for performing exploratory data analysis on the dataset.
+check_of_block.R: Script used to validate or inspect blocks of data.
+choose_block_on_2023.R: Script focused on selecting data blocks relevant to the year 2023.
+overall_72-h maxima.R: Script for calculating or analyzing the 72-hour maxima across datasets.
+Modelling/: A sub-directory within Data_analysis/ that includes scripts related to the modeling phase.
+Analysis_based_on_best_model/: Contains scripts for identifying and using the best-fitting models.
+return_best_fitted.R: Script to retrieve or analyze the best-fitted model(s).
+z_w_statistics.R: Script for computing or analyzing statistics relevant to the model fits.
+Model_fitting_reconstruct/: Likely a directory dedicated to scripts for fitting models and reconstructing data or models.
+Model_fitting_and_return.R: Script for model fitting and result generation.
+threshold_finding.R: Script used to determine thresholds, possibly within the context of model predictions.
+Wavelet_analysis/: Sub-directory containing scripts related to wavelet analysis, likely for time series or frequency analysis.
+README.md: This file, providing an overview and instructions for the project.
+
+Step-by-Step Guide
+To help you navigate and work with this project, here is a step-by-step guide:
+
+Data Preparation:
+
+Place raw data in the appropriate folders under Data/ (e.g., #41043/, #41044/).
+Process raw data as necessary and store the results in Data/Processes_data/.
+Data Analysis:
+
+Navigate to the R/Data_analysis/ directory.
+Use EDA.R to explore and understand the data.
+Validate blocks of data with check_of_block.R.
+If analyzing data from 2023, use choose_block_on_2023.R.
+Calculate 72-hour maxima using overall_72-h maxima.R.
+Modelling:
+
+Start with R/Data_analysis/Modelling/Analysis_based_on_best_model/ to identify and use the best models.
+Use Model_fitting_and_return.R for model fitting and result generation.
+Apply threshold_finding.R for determining necessary thresholds.
+Explore Wavelet_analysis/ for wavelet-based analysis if needed.
+Model Fitting and Reconstruction:
+
+Use the scripts in R/Data_analysis/Modelling/Model_fitting_reconstruct/ to focus on model fitting and reconstruction tasks.
+
+
 
 
 ## Usage
