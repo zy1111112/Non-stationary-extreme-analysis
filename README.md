@@ -72,8 +72,8 @@ Non-stationary-extreme-analysis/
 │       ├── Model_fitting_and_return.R
 │       ├── Model_fitting_reconstruct/
 │       └── Analysis_based_on_best_model/
-│               ├── return_best_fitted.R
-│               └── z_w_statistics.R
+│               ├── z_w_statistics.R
+│               └── return_best_fitted.R
 └── README.md
 ```
 ## Folder and File Descriptions
@@ -88,17 +88,17 @@ Here is an explanation of the main folders and files in this project:
 - **R/**: Contains R scripts related to data analysis and modeling.
   - **Data_analysis/**: A sub-directory within `R/` that includes scripts for various stages of data analysis.
     - **EDA.R**: Script for performing exploratory data analysis on the dataset.
-    - **choose_block_on_2023.R**: Script focused on selecting data blocks by examining the serial correlation of internal structures for station 41049 in the year 2023. This script is also applicable to other stations and years.
+    - **choose_block_on_2023.R**: Script focused on selecting data blocks by examining the serial correlation of internal structures for station 41049 in the year 2023. 
     - **check_of_block.R**: Script used to validate 72-hour data blocks by examining the first-order dependence of extreme value occurrences.
     - **overall_72-h maxima.R**: Script for calculating or analyzing the 72-hour maxima across datasets.
   - **Wavelet_analysis/**: A sub-directory within `R/` containing scripts related to wavelet analysis. These scripts are used to generate the wavelet power spectrum, compute the global power spectrum, detect significant periods, and perform data reconstruction based on the wavelet analysis.
   - **Modelling/**: A sub-directory within `R/` that includes scripts related to the modeling phase.
+    - **threshold_finding.R**: Script used to determine time-varying thresholds.
+    - **Model_fitting_and_return.R**: Script for model fitting and return level estimation based on the models without reconstruction term. 
+    - **Model_fitting_reconstruct/**: A directory dedicated to scripts for fitting models and estimating return levels based on the models with reconstruction term. 
     - **Analysis_based_on_best_model/**: Contains scripts for identifying and using the best-fitting models.
-     - **return_best_fitted.R**: Script to retrieve or analyze the best-fitted model(s).
-     - **z_w_statistics.R**: Script for computing or analyzing statistics relevant to the model fits.
-    - **Model_fitting_reconstruct/**: Likely a directory dedicated to scripts for fitting models and reconstructing data or models.
-    - **Model_fitting_and_return.R**: Script for model fitting and result generation.
-    - **threshold_finding.R**: Script used to determine thresholds, possibly within the context of model predictions.
+     - **z_w_statistics.R**: Script for computing or analyzing Z-statistics and W-statistics relevant to the best model fits.
+     - **return_best_fitted.R**: Script to make effective and aggregated return level estimation based on the best model.
 
 - **README.md**: This file, providing an overview and instructions for the project.
 
